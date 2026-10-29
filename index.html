@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FreshRoute AI | Food Rescue</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="logo">✳</span> FreshRoute <span class="ai">AI</span></a>
+    <nav><a href="#dashboard">Dashboard</a><a href="#listings">Food listings</a><a href="#donate">Donate food</a></nav>
+    <span class="live"><i></i> Demo environment</span>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">LESS WASTE. MORE GOOD.</p>
+        <h1>Good food deserves<br><em>a better destination.</em></h1>
+        <p class="sub">Connect surplus food with community partners before it goes to waste. Smarter matching, clearer priorities, greater impact.</p>
+        <div class="hero-actions"><a class="btn primary" href="#donate">＋ List surplus food</a><a class="btn secondary" href="#listings">Explore listings →</a></div>
+      </div>
+      <div class="hero-art">
+        <div class="orbit orbit1"></div><div class="orbit orbit2"></div>
+        <div class="food-emoji">🥬</div><div class="float-card"><span>Today's mission</span><strong>Rescue more. Waste less.</strong><small>Every listing can make a difference.</small></div>
+        <div class="mini-stat"><span>♧</span><div><b>Local-first</b><small>Partner matching</small></div></div>
+      </div>
+    </section>
+    <section id="dashboard" class="section">
+      <div class="section-heading"><div><p class="eyebrow">AT A GLANCE</p><h2>Impact dashboard</h2></div><span class="pill">● Updated from demo database</span></div>
+      <div class="stats">
+        <article class="stat"><span class="stat-icon green">♧</span><p>Active listings</p><strong id="active">—</strong><small>Ready for matching</small></article>
+        <article class="stat"><span class="stat-icon orange">▤</span><p>Food units listed</p><strong id="listed">—</strong><small>Across all categories</small></article>
+        <article class="stat"><span class="stat-icon blue">♡</span><p>Food units rescued</p><strong id="rescued">—</strong><small>Marked as rescued</small></article>
+        <article class="stat"><span class="stat-icon purple">⌂</span><p>Community partners</p><strong id="partners">—</strong><small>Demo partner network</small></article>
+      </div>
+    </section>
+    <section id="listings" class="section">
+      <div class="section-heading"><div><p class="eyebrow">FIND A MATCH</p><h2>Available food</h2><p class="muted">Listings are ranked with an explainable demo urgency score.</p></div><button class="btn secondary" id="refresh">↻ Refresh</button></div>
+      <div id="listing-grid" class="listing-grid"><div class="empty">Loading listings…</div></div>
+    </section>
+    <section id="donate" class="section donate-section">
+      <div class="donate-intro"><p class="eyebrow">MAKE AN IMPACT</p><h2>Share surplus.<br><em>Support your community.</em></h2><p class="muted">Add the details below so nearby partners can find food that needs a timely pickup.</p><div class="safety-note">ⓘ <span>Only list food that can be safely stored and redistributed. Partners must verify condition and local food-safety requirements before pickup.</span></div></div>
+      <form id="donation-form" class="form-card">
+        <h3>New food listing</h3>
+        <div class="form-grid">
+          <label>Donor / organization<input name="donor" required placeholder="e.g. Sunrise Bakery"></label>
+          <label>Food name<input name="food_name" required placeholder="e.g. Fresh bread packs"></label>
+          <label>Food category<select name="category" required><option value="Cooked meal">Cooked meal</option><option value="Bakery">Bakery</option><option value="Dairy">Dairy</option><option value="Produce">Produce</option><option value="Packaged food">Packaged food</option></select></label>
+          <label>Quantity<input name="quantity" type="number" min="1" required placeholder="e.g. 25"></label>
+          <label>Unit<select name="unit"><option>meals</option><option>packs</option><option>kg</option><option>packets</option><option>boxes</option></select></label>
+          <label>Pickup location<input name="location" required placeholder="e.g. Karur"></label>
+          <label>Usable time remaining (hours)<input name="hours_left" type="number" min="0.5" max="168" step="0.5" required value="6"></label>
+          <label class="full">Pickup notes<textarea name="notes" rows="3" placeholder="Storage details, pickup window, allergens…"></textarea></label>
+        </div>
+        <button class="btn primary submit" type="submit">＋ Publish food listing</button><p id="form-message" class="form-message" role="status"></p>
+      </form>
+    </section>
+    <section class="footer-callout"><span class="footer-icon">✳</span><div><h3>Small actions. Shared impact.</h3><p>FreshRoute AI turns surplus into an opportunity to support local communities.</p></div><a href="#donate">Start a listing ↑</a></section>
+  </main>
+  <footer>FreshRoute AI · Student project prototype · Demo data only</footer>
+  <script src="/static/app.js"></script>
+</body>
+</html>
