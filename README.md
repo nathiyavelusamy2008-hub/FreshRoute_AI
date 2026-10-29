@@ -2,7 +2,7 @@
 
 FreshRoute AI is a full-stack demo platform that helps food donors list surplus food, connects listings with nearby NGO/relief partners, prioritizes pickups by freshness and urgency, and tracks food-rescue impact.
 
-## Features
+## Features...
 - Responsive dashboard with demo impact metrics
 - Create and browse surplus-food listings
 - Rule-based freshness/urgency priority score (demo, not a trained AI model)
